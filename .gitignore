@@ -1,0 +1,32 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.sln
+*.sw?
+*.bak
+*.tmp
+
+# Mac hidden files
+*~
+
+# Apps script project configs (clasp)
+.clasp.json
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+google-apps-script.js
+rules

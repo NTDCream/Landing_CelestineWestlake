@@ -4,9 +4,32 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <!-- SEO & Meta Tags -->
   <title>Celestine Westlake | Căn hộ Luxury View Hồ Tây - 300 Võ Chí Công</title>
   <meta name="description"
-    content="Celestine Westlake - Căn hộ 3-4 phòng ngủ view trực diện Hồ Tây. Giá trị độc bản, mức giá tốt nhất thị trường. Đã cất nóc T3/2026.">
+    content="Dự án Celestine Westlake (300 Võ Chí Công) - Biểu tượng sống sang trung tâm Hồ Tây. Cung cấp căn hộ 3 Phòng Ngủ, Duplex, Penthouse đẳng cấp. 100% sở hữu lâu dài, pháp lý minh bạch. Nhận bảng giá và ưu đãi hỗ trợ lãi suất 0%.">
+  <meta name="keywords"
+    content="Celestine Westlake, chung cư Tây Hồ, căn hộ Hồ Tây, 300 Võ Chí Công, chung cư view hồ tây, duplex tây hồ, penthouse tây hồ, dự án celestine">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Celestine Westlake">
+
+  <!-- Open Graph / Facebook / Zalo -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Celestine Westlake | Căn hộ Luxury View Hồ Tây - 300 Võ Chí Công">
+  <meta property="og:description"
+    content="Khám phá biểu tượng sống sang bậc nhất Tây Hồ. Căn hộ 3 Phòng Ngủ, Duplex, Penthouse độc bản, sở hữu lâu dài.">
+  <meta property="og:url" content="https://celestinewestlake.vn">
+  <meta property="og:image" content="https://celestinewestlake.vn/images/Tong%20quan%201.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Celestine Westlake">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Celestine Westlake | Căn hộ Luxury View Hồ Tây">
+  <meta name="twitter:description"
+    content="Khám phá biểu tượng sống sang bậc nhất Tây Hồ. Căn hộ độc bản, sở hữu lâu dài.">
+  <meta name="twitter:image" content="https://celestinewestlake.vn/images/Tong%20quan%201.jpg">
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Cinzel:wght@400;500;600&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
@@ -611,7 +634,7 @@
       flex: 0 0 auto;
       display: flex;
       width: max-content;
-      animation: marquee-scroll 10s linear infinite;
+      animation: marquee-scroll 16s linear infinite;
     }
 
     @keyframes marquee-scroll {
@@ -676,7 +699,113 @@
     #progress-marquee-wrap {
       padding: 0;
     }
+
+    /* ── Multi-step Form ─────────────────────────────────────────── */
+    .form-step {
+      display: none;
+      opacity: 0;
+      transform: translateX(20px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .form-step.active {
+      display: block;
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .form-step.slide-out-left {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+
+    .step-indicator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 2.5rem;
+    }
+
+    .step-dot {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      transition: all 0.35s ease;
+      border: 2px solid #c1c7ce;
+      color: #71787e;
+      background: transparent;
+    }
+
+    .step-dot.active {
+      border-color: #014460;
+      background: #014460;
+      color: white;
+      box-shadow: 0 0 0 4px rgba(1, 68, 96, 0.15);
+    }
+
+    .step-dot.completed {
+      border-color: #cca730;
+      background: #cca730;
+      color: #241a00;
+    }
+
+    .step-line {
+      width: 80px;
+      height: 2px;
+      background: #c1c7ce;
+      transition: background 0.35s ease;
+    }
+
+    .step-line.active {
+      background: #cca730;
+    }
+
+    /* Section CTA style */
+    .section-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 32px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      transition: all 0.35s ease;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .section-cta .material-symbols-outlined {
+      transition: transform 0.3s ease;
+    }
+
+    .section-cta:hover .material-symbols-outlined {
+      transform: translateX(4px);
+    }
+
+    /* Hide Scrollbar Utility */
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    /* Thêm style cho thẻ bullet của Swiper */
+    .swiper-pagination-bullet-active {
+      background-color: #cca730 !important;
+    }
   </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body class="bg-surface font-body text-on-surface selection:bg-tertiary-container selection:text-white">
@@ -689,7 +818,7 @@
     <div class="flex justify-between items-center px-6 md:px-8 py-3 md:py-4">
       <!-- Logo -->
       <a href="#hero" class="flex items-center gap-3 flex-shrink-0">
-        <img src="images/logo.png" alt="Celestine Westlake" class="h-10 md:h-12 w-auto object-contain">
+        <img src="images/logo2.png" alt="Celestine Westlake" class="h-10 md:h-12 w-auto object-contain">
       </a>
 
       <!-- Desktop Nav -->
@@ -715,7 +844,7 @@
       <div class="flex items-center gap-3">
         <a href="#dang-ky"
           class="bg-primary-container text-white px-4 md:px-6 py-2 md:py-2.5 rounded-full font-display text-xs tracking-[0.18em] uppercase font-bold gold-glow hover:bg-primary transition-all active:scale-95 pulse-gold">
-          Liên Hệ
+          Nhận báo giá
         </a>
         <!-- Mobile Hamburger -->
         <button id="menu-toggle" onclick="toggleMenu()" class="md:hidden text-primary-container p-1">
@@ -767,16 +896,16 @@
           Căn hộ 3 - 4 ngủ
           <span class="block italic font-light opacity-90">View trực diện Hồ Tây</span>
         </h1>
-        <p
+        <!-- <p
           class="font-body text-xl md:text-2xl text-on-primary-container font-light max-w-xl mb-12 border-l-2 border-tertiary pl-6">
           Giá trị độc bản — Mức giá tốt nhất thị trường
-        </p>
+        </p> -->
         <div class="flex flex-wrap gap-4 md:gap-6 items-center">
-          <a href="#dang-ky"
+          <!-- <a href="#dang-ky"
             class="bg-tertiary-container text-on-tertiary-container px-8 md:px-10 py-4 md:py-5 rounded-lg font-bold text-base md:text-lg gold-glow flex items-center gap-3 hover:bg-tertiary transition-all cursor-pointer">
             <span>Nhận Bảng Giá Chi Tiết</span>
             <span class="material-symbols-outlined">arrow_forward</span>
-          </a>
+          </a> -->
           <a href="#tien-do"
             class="text-white border-b border-white/30 pb-2 hover:border-tertiary transition-all uppercase tracking-widest text-sm font-bold flex items-center gap-3 cursor-pointer">
             <span class="material-symbols-outlined">play_circle</span>
@@ -788,8 +917,8 @@
       <!-- Floating Card -->
       <div class="hidden lg:flex md:col-span-4 flex-col justify-end items-end pb-24">
         <div class="bg-white/10 backdrop-blur-2xl p-8 rounded-xl border border-white/10 shadow-2xl max-w-sm">
-          <div class="text-tertiary-fixed-dim text-4xl font-headline mb-4">03-04</div>
-          <h3 class="text-white font-headline text-xl mb-2">110 - 140 m² Căn 3 ngủ 2 ban công Đông Nam</h3>
+          <div class="text-tertiary-fixed-dim text-4xl font-headline mb-4">110.6 - 138.3 m²</div>
+          <h3 class="text-white font-headline text-xl mb-2"> Căn 3 ngủ 2 ban công Đông Nam</h3>
           <p class="text-white/70 text-sm leading-relaxed mb-6 font-body">
             Mỗi căn hộ được thiết kế tối ưu với cửa kính kịch trần, mang trọn vẹn sinh khí của Hồ Tây vào từng mét vuông
             diện tích.
@@ -813,7 +942,7 @@
   <!-- ============================================================ -->
   <!-- SECTION 2: GIỚI THIỆU DỰ ÁN                                 -->
   <!-- ============================================================ -->
-  <section id="gioi-thieu" class="py-24 md:py-32 bg-surface text-on-surface">
+  <section id="gioi-thieu" class="py-16 md:py-20 bg-surface text-on-surface">
     <div class="max-w-7xl mx-auto px-6 md:px-12">
 
       <!-- Opening Statement -->
@@ -986,6 +1115,14 @@
               cho thuê với giá trị cao tại khu vực cho thuê tốt nhất Hà Nội.</p>
           </div>
         </div>
+        <!-- CTA: Sở hữu vị trí hiếm hoi -->
+        <div class="flex justify-center mt-12">
+          <a href="#dang-ky"
+            class="section-cta bg-primary-container text-tertiary-fixed-dim hover:bg-primary hover:shadow-xl hover:shadow-primary/20">
+            <span>Nhận Tư Vấn Ngay</span>
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -993,14 +1130,14 @@
   <!-- ============================================================ -->
   <!-- SECTION 3: VỊ TRÍ                                           -->
   <!-- ============================================================ -->
-  <section id="vi-tri" class="bg-surface-container-low py-24 md:py-32">
+  <section id="vi-tri" class="bg-surface-container-low py-16 md:py-20">
     <div class="max-w-7xl mx-auto px-6 md:px-12 mb-20 lg:grid lg:grid-cols-12 lg:gap-16 items-start fade-up">
       <div class="lg:col-span-7">
         <span class="text-tertiary font-label uppercase tracking-widest text-sm mb-4 block font-bold">Vị Thế Độc
           Bản</span>
         <h2 class="font-headline text-4xl md:text-6xl text-primary leading-tight mb-8">
-          Vị thế Độc tôn —<br>
-          <span class="text-tertiary">Kết nối mọi giá trị tầm cỡ</span>
+          Vị thế Độc tôn<br>
+          <!-- <span class="text-tertiary">Kết nối mọi giá trị tầm cỡ</span> -->
         </h2>
         <p class="text-on-surface-variant text-lg md:text-xl leading-relaxed max-w-2xl font-light">
           Celestine Westlake kiêu hãnh tọa lạc trên đại lộ 10 làn Võ Chí Công – "long mạch giao thương" và cửa ngõ đón
@@ -1009,15 +1146,15 @@
         </p>
       </div>
       <div class="lg:col-span-5 mt-12 lg:mt-0 flex flex-col gap-6">
-        <div class="bg-surface-container p-8 rounded-xl relative overflow-hidden">
+        <div class="bg-tertiary-fixed-dim p-8 rounded-xl relative overflow-hidden">
           <div class="absolute top-0 right-0 p-4 opacity-10">
             <span class="material-symbols-outlined text-6xl">location_on</span>
           </div>
-          <div class="text-tertiary-fixed-dim font-headline text-3xl mb-1 italic">300 Võ Chí Công</div>
+          <div class="text-tertiary-fixed-dim font-headline text-3xl mb-1 italic text-white">300 VÕ CHÍ CÔNG</div>
           <div class="text-on-surface-variant text-sm uppercase tracking-widest">Tây Hồ, Hà Nội</div>
         </div>
         <div class="bg-primary-container p-8 rounded-xl text-white">
-          <div class="font-headline text-2xl text-tertiary-fixed mb-2 italic">Cửa ngõ Ngoại giao</div>
+          <div class="font-headline text-2xl text-tertiary-fixed mb-2 italic">CỬA NGÕ NGOẠI GIAO</div>
           <p class="text-sm opacity-80 leading-relaxed font-light">Tọa lạc tại điểm giao thoa giữa di sản ngàn năm của
             Hồ Tây và sự năng động của trung tâm hành chính mới.</p>
         </div>
@@ -1051,11 +1188,11 @@
         </div>
         <div class="hidden md:flex gap-8">
           <div class="text-center">
-            <div class="text-tertiary font-bold">10 Làn</div>
-            <div class="text-[10px] text-on-surface-variant uppercase">Đường Võ Chí Công</div>
+            <div class="text-tertiary font-bold">1 Phút</div>
+            <div class="text-[10px] text-on-surface-variant uppercase">Đi bộ ra Hồ Tây</div>
           </div>
           <div class="text-center">
-            <div class="text-tertiary font-bold">Nhật Tân</div>
+            <div class="text-tertiary font-bold">20 phút</div>
             <div class="text-[10px] text-on-surface-variant uppercase">Kết nối Sân Bay</div>
           </div>
         </div>
@@ -1063,9 +1200,9 @@
     </div>
 
     <!-- Connectivity Grid -->
-    <div class="max-w-7xl mx-auto px-6 md:px-12 py-24 fade-up">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 pt-16 pb-8 fade-up">
       <div class="mb-16">
-        <h2 class="font-headline text-3xl text-primary mb-4">Kết nối Hoàn chỉnh</h2>
+        <h2 class="font-headline text-3xl text-primary mb-4">Kết nối mọi giá trị tầm cỡ</h2>
         <div class="w-20 h-1 bg-tertiary"></div>
       </div>
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-outline-variant/20 rounded-xl overflow-hidden">
@@ -1125,37 +1262,45 @@
             trục Võ Chí Công - Cầu Nhật Tân huyết mạch.</p>
         </div>
       </div>
+      <!-- CTA: Kết nối hoàn chỉnh -->
+      <div class="flex justify-center mt-12">
+        <a href="#dang-ky"
+          class="section-cta bg-primary-container text-tertiary-fixed-dim hover:bg-primary hover:shadow-xl hover:shadow-primary/20">
+          <span>Đặt lịch tham quan</span>
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- ============================================================ -->
   <!-- SECTION 4: MẶT BẰNG                                         -->
   <!-- ============================================================ -->
-  <section id="mat-bang" class="bg-surface py-24 md:py-32">
+  <section id="mat-bang" class="bg-surface py-16 md:py-20">
     <!-- Blueprint Hero -->
     <div
-      class="bg-gradient-to-br from-primary to-primary-container py-20 md:py-24 px-6 md:px-24 flex flex-col items-center overflow-hidden">
+      class="bg-gradient-to-br from-primary to-primary-container py-16 md:py-20 px-6 md:px-24 flex flex-col items-center overflow-hidden">
       <div class="max-w-7xl mx-auto w-full text-center mb-12 md:mb-16 fade-up">
-        <h2 class="text-tertiary-fixed-dim font-headline text-base tracking-[0.3em] uppercase mb-4">The Blueprint</h2>
+        <!-- <h2 class="text-tertiary-fixed-dim font-headline text-base tracking-[0.3em] uppercase mb-4">The Blueprint</h2> -->
         <h3 class="text-white font-headline text-4xl md:text-7xl leading-tight mb-8">Mặt bằng Tổng thể</h3>
         <p class="text-on-primary-container text-lg max-w-3xl mx-auto leading-relaxed mb-12">
           Tầm nhìn quy hoạch độc bản, tối ưu hóa sự riêng tư và tầm nhìn panorama hướng trọn mặt nước Tây Hồ thơ mộng.
         </p>
         <div class="flex justify-center gap-12 md:gap-16 border-t border-amber-400/10 pt-8 max-w-lg mx-auto">
           <div class="text-center">
-            <span class="block text-tertiary-fixed-dim font-headline text-3xl">99</span>
-            <span class="text-on-primary-container font-label text-[10px] uppercase tracking-[0.2em]">Kiệt tác giới
-              hạn</span>
+            <span class="block text-tertiary-fixed-dim font-headline text-3xl">6-7</span>
+            <span class="text-on-primary-container font-label text-[10px] uppercase tracking-[0.2em]">Căn hộ trên mỗi
+              sàn</span>
           </div>
           <div class="text-center">
-            <span class="block text-tertiary-fixed-dim font-headline text-3xl">3.8m</span>
-            <span class="text-on-primary-container font-label text-[10px] uppercase tracking-[0.2em]">Trần cao tiêu
-              chuẩn</span>
+            <span class="block text-tertiary-fixed-dim font-headline text-3xl">6</span>
+            <span class="text-on-primary-container font-label text-[10px] uppercase tracking-[0.2em]">thang máy trên mỗi
+              sàn</span>
           </div>
           <div class="text-center">
             <span class="block text-tertiary-fixed-dim font-headline text-3xl">270°</span>
             <span class="text-on-primary-container font-label text-[10px] uppercase tracking-[0.2em]">Tầm nhìn
-              Panorama</span>
+              Panorama Hồ Tây - Sông Hồng</span>
           </div>
         </div>
       </div>
@@ -1184,7 +1329,7 @@
     </div>
 
     <!-- Unit Design Tabs -->
-    <div class="max-w-7xl mx-auto px-6 md:px-24 py-24 fade-up">
+    <div class="max-w-7xl mx-auto px-6 md:px-24 py-16 md:py-20 fade-up">
       <div class="text-center mb-16">
         <h2 class="font-headline text-4xl md:text-5xl text-primary mb-6">Cơ cấu Căn hộ</h2>
         <div class="w-24 h-px bg-tertiary mx-auto mb-10"></div>
@@ -1206,13 +1351,30 @@
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
             <div class="relative">
               <div
-                class="aspect-[4/3] bg-surface-container-low rounded-lg p-4 shadow-sm group overflow-hidden flex items-center justify-center">
-                <img alt="Căn 3 phòng ngủ Celestine"
-                  class="w-full h-full object-contain rounded-sm transition-transform duration-700 group-hover:scale-105"
-                  src="images/Can 3 ngu.webp">
+                class="swiper swiper-3br aspect-[4/3] bg-surface-container-low rounded-lg p-0 shadow-sm overflow-hidden group">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide p-4 flex items-center justify-center"><img alt="Căn 3 phòng ngủ Celestine 1"
+                      class="w-full h-full object-contain" src="images/Can 3 ngu.webp"></div>
+                  <div class="swiper-slide p-4 flex items-center justify-center"><img alt="Căn 3 phòng ngủ Celestine 2"
+                      class="w-full h-full object-contain" src="images/Can 3 ngu 2.webp"></div>
+                  <div class="swiper-slide p-4 flex items-center justify-center"><img alt="Căn 3 phòng ngủ Celestine 3"
+                      class="w-full h-full object-contain" src="images/Can 3 ngu 3.webp"></div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination !bottom-0 pb-4"></div>
+                <!-- Carousel Controls -->
+                <div
+                  class="swiper-button-prev !text-white !opacity-100 md:!opacity-0 md:group-hover:!opacity-100 transition-opacity !bg-black/40 hover:!bg-black/60 !w-10 !h-10 border border-white/20 !rounded-full !left-2 flex items-center justify-center after:hidden">
+                  <span class="material-symbols-outlined mb-[-2px]">chevron_left</span>
+                </div>
+                <div
+                  class="swiper-button-next !text-white !opacity-100 md:!opacity-0 md:group-hover:!opacity-100 transition-opacity !bg-black/40 hover:!bg-black/60 !w-10 !h-10 border border-white/20 !rounded-full !right-2 flex items-center justify-center after:hidden">
+                  <span class="material-symbols-outlined mb-[-2px]">chevron_right</span>
+                </div>
               </div>
-              <div class="absolute -top-4 -left-4 bg-primary text-amber-400 px-6 py-4 font-headline text-xl shadow-xl">
-                110.6 m²</div>
+              <div
+                class="absolute -top-4 -left-4 bg-primary text-amber-400 px-6 py-4 font-headline text-xl shadow-xl z-20">
+                110.6 - 138 m²</div>
             </div>
             <div>
               <span class="text-tertiary font-label tracking-[0.2em] uppercase text-sm mb-4 block">The Heritage
@@ -1285,13 +1447,28 @@
             </div>
             <div class="relative order-1 lg:order-2">
               <div
-                class="aspect-[4/3] bg-surface-container-low rounded-lg p-4 shadow-sm group overflow-hidden flex items-center justify-center">
-                <img alt="Căn Duplex Celestine"
-                  class="w-full h-full object-contain rounded-sm transition-transform duration-700 group-hover:scale-105"
-                  src="images/can duplex 1.webp">
+                class="swiper swiper-duplex aspect-[4/3] bg-surface-container-low rounded-lg p-0 shadow-sm overflow-hidden group">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide p-4 flex items-center justify-center"><img alt="Căn Duplex Celestine 1"
+                      class="w-full h-full object-contain" src="images/can duplex 1.webp"></div>
+                  <div class="swiper-slide p-4 flex items-center justify-center"><img alt="Căn Duplex Celestine 2"
+                      class="w-full h-full object-contain" src="images/can duplex 2.webp"></div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination !bottom-0 pb-4"></div>
+                <!-- Carousel Controls -->
+                <div
+                  class="swiper-button-prev !text-white !opacity-100 md:!opacity-0 md:group-hover:!opacity-100 transition-opacity !bg-black/40 hover:!bg-black/60 !w-10 !h-10 border border-white/20 !rounded-full !left-2 flex items-center justify-center after:hidden">
+                  <span class="material-symbols-outlined mb-[-2px]">chevron_left</span>
+                </div>
+                <div
+                  class="swiper-button-next !text-white !opacity-100 md:!opacity-0 md:group-hover:!opacity-100 transition-opacity !bg-black/40 hover:!bg-black/60 !w-10 !h-10 border border-white/20 !rounded-full !right-2 flex items-center justify-center after:hidden">
+                  <span class="material-symbols-outlined mb-[-2px]">chevron_right</span>
+                </div>
               </div>
-              <div class="absolute -top-4 -right-4 bg-primary text-amber-400 px-6 py-4 font-headline text-xl shadow-xl">
-                166.5 m²</div>
+              <div
+                class="absolute -top-4 -right-4 bg-primary text-amber-400 px-6 py-4 font-headline text-xl shadow-xl z-20">
+                166.5 - 194.2 m²</div>
             </div>
           </div>
         </div>
@@ -1301,13 +1478,28 @@
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
             <div class="relative">
               <div
-                class="aspect-[4/3] bg-surface-container-low rounded-lg p-4 shadow-sm group overflow-hidden flex items-center justify-center">
-                <img alt="Căn Penthouse Celestine"
-                  class="w-full h-full object-contain rounded-sm transition-transform duration-700 group-hover:scale-105"
-                  src="images/hinh anh thuc te 2.webp">
+                class="swiper swiper-penthouse aspect-[4/3] bg-surface-container-low rounded-lg p-0 shadow-sm overflow-hidden group">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide p-4 flex items-center justify-center"><img alt="Căn Penthouse Celestine 1"
+                      class="w-full h-full object-contain" src="images/penthouse.jpg"></div>
+                  <div class="swiper-slide p-4 flex items-center justify-center"><img alt="Căn Penthouse Celestine 2"
+                      class="w-full h-full object-contain" src="images/penthouse2.jpg"></div>
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination !bottom-0 pb-4"></div>
+                <!-- Carousel Controls -->
+                <div
+                  class="swiper-button-prev !text-white !opacity-100 md:!opacity-0 md:group-hover:!opacity-100 transition-opacity !bg-black/40 hover:!bg-black/60 !w-10 !h-10 border border-white/20 !rounded-full !left-2 flex items-center justify-center after:hidden">
+                  <span class="material-symbols-outlined mb-[-2px]">chevron_left</span>
+                </div>
+                <div
+                  class="swiper-button-next !text-white !opacity-100 md:!opacity-0 md:group-hover:!opacity-100 transition-opacity !bg-black/40 hover:!bg-black/60 !w-10 !h-10 border border-white/20 !rounded-full !right-2 flex items-center justify-center after:hidden">
+                  <span class="material-symbols-outlined mb-[-2px]">chevron_right</span>
+                </div>
               </div>
-              <div class="absolute -top-4 -left-4 bg-primary text-amber-400 px-6 py-4 font-headline text-xl shadow-xl">
-                229.4 m²</div>
+              <div
+                class="absolute -top-4 -left-4 bg-primary text-amber-400 px-6 py-4 font-headline text-xl shadow-xl z-20">
+                229.4 - 373.7 m²</div>
             </div>
             <div>
               <div class="flex items-center gap-4 mb-4">
@@ -1321,7 +1513,7 @@
               <div class="grid grid-cols-2 gap-6 mb-10">
                 <div class="border-b border-surface-container-highest pb-4">
                   <span class="text-outline text-xs uppercase tracking-widest font-label block mb-2">Diện tích</span>
-                  <span class="text-primary font-headline text-xl">229.4 - 373.7 m² m²</span>
+                  <span class="text-primary font-headline text-xl">229.4 - 373.7 m²</span>
                 </div>
                 <div class="border-b border-surface-container-highest pb-4">
                   <span class="text-outline text-xs uppercase tracking-widest font-label block mb-2">Hồ bơi</span>
@@ -1354,7 +1546,7 @@
   <!-- ============================================================ -->
   <!-- SECTION 5: TIỆN ÍCH                                         -->
   <!-- ============================================================ -->
-  <section id="tien-ich" class="pt-24 pb-16 px-6 md:px-12 max-w-7xl mx-auto">
+  <section id="tien-ich" class="pt-16 md:pt-20 pb-12 px-6 md:px-12 max-w-7xl mx-auto">
     <header
       class="mb-16 md:mb-20 text-center md:text-left flex flex-col md:flex-row md:items-end justify-between gap-8 fade-up">
       <div class="max-w-2xl">
@@ -1497,7 +1689,7 @@
   <!-- ============================================================ -->
   <!-- SECTION 6: SO SÁNH GIÁ                                      -->
   <!-- ============================================================ -->
-  <section id="so-sanh-gia" class="py-24 md:py-32 bg-surface-container-low">
+  <section id="so-sanh-gia" class="py-16 md:py-20 bg-surface-container-low">
     <div class="max-w-[1200px] mx-auto px-6 md:px-8 fade-up">
       <div class="bg-primary-container p-6 md:p-16 rounded-2xl shadow-2xl relative overflow-hidden">
         <div class="relative z-10">
@@ -1507,8 +1699,8 @@
             class="mb-10 md:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-white/10 pb-8">
             <div>
               <span
-                class="inline-block px-3 py-1 rounded bg-tertiary-container text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest mb-4">Market
-                Comparison</span>
+                class="inline-block px-3 py-1 rounded bg-tertiary-container text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest mb-4">Khu
+                vực Tây Hồ</span>
               <h2 class="text-white font-headline text-2xl md:text-4xl italic mb-2">Biểu Đồ So Sánh Giá Dự Án</h2>
               <p class="text-on-primary-container font-light italic text-xs md:text-sm">Đơn vị: Triệu VNĐ/m² - Cập nhật
                 quý I/2026 tại khu vực Tây Hồ</p>
@@ -1592,8 +1784,8 @@
                   <div class="absolute left-0 right-0 text-center pointer-events-none z-20"
                     style="bottom: calc(22.86% + 2px);">
                     <span
-                      class="bg-yellow-300 text-yellow-900 text-[9px] font-black px-2 py-0.5 rounded leading-none">BEST
-                      PRICE</span>
+                      class="bg-yellow-300 text-yellow-900 text-[9px] font-black px-2 py-0.5 rounded leading-none">Giá
+                      đang tốt nhất</span>
                   </div>
                   <!-- Bar: absolute bottom-0, height % works correctly here -->
                   <div
@@ -1703,7 +1895,7 @@
                   </div>
                   <div class="absolute top-full left-0 right-0 pt-2 text-center">
                     <div class="text-white/70 font-bold text-[14px] lg:text-[18px]">240</div>
-                    <div class="text-white/50 text-[10px] lg:text-[13px] uppercase tracking-wide">Heritage TH</div>
+                    <div class="text-white/50 text-[10px] lg:text-[13px] uppercase tracking-wide">Heritage Tây Hồ</div>
                     <div class="text-white/40 text-[9px] lg:text-[11px] mt-1">Đã bàn giao</div>
                   </div>
                 </div>
@@ -1882,7 +2074,7 @@
   <!-- SECTION 7: TIẾN ĐỘ                                          -->
   <!-- ============================================================ -->
   <section id="tien-do" class="relative bg-primary-container overflow-hidden"
-    style="padding-top:6rem;padding-bottom:0;">
+    style="padding-top:4rem;padding-bottom:0;">
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#002d41_0%,#014460_100%)] opacity-80"></div>
     <!-- ① 2-column content row -->
     <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-10 pb-16 md:pb-20">
@@ -1894,10 +2086,16 @@
             sử kiến tạo</span>
           <h2 class="text-5xl md:text-6xl font-headline text-white leading-tight mb-6">Tiến độ dự án</h2>
           <div class="w-24 h-px bg-tertiary mb-6"></div>
-          <p class="text-white/70 font-body text-base leading-relaxed">
+          <p class="text-white/70 font-body text-base leading-relaxed mb-8">
             Từng viên gạch, từng chi tiết kiến trúc tại Celestine Westlake được chăm chút tỉ mỉ, hiện thực hóa tầm nhìn
             về một chuẩn mực sống di sản bên bờ Hồ Tây.
           </p>
+          <!-- CTA: Tiến độ dự án -->
+          <a href="#dang-ky"
+            class="section-cta bg-tertiary-container text-on-tertiary-container hover:bg-tertiary hover:text-on-tertiary hover:shadow-xl hover:shadow-tertiary/20">
+            <span>Nhận Cập Nhật Tiến Độ</span>
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
         </div>
 
         <!-- RIGHT: Milestone list stacked vertically -->
@@ -1917,7 +2115,12 @@
             <span
               class="font-headline text-tertiary-container text-4xl leading-none flex-shrink-0 group-hover:text-tertiary-fixed transition-colors">02</span>
             <div>
-              <h4 class="text-white font-body font-semibold mb-1">Cất nóc dự án</h4>
+              <div class="flex items-center gap-3 mb-1">
+                <h4 class="text-white font-body font-semibold">Cất nóc dự án</h4>
+                <span
+                  class="bg-yellow-400 text-yellow-900 text-[10px] font-bold px-2 py-1 rounded leading-none uppercase tracking-wider shadow-[0_0_10px_rgba(250,204,21,0.3)]">Hiện
+                  tại</span>
+              </div>
               <p class="text-white/40 text-sm leading-relaxed">Tháng 03/2026 — Đạt độ cao tối đa theo thiết kế, đúng
                 tiến độ cam kết.</p>
             </div>
@@ -1927,9 +2130,19 @@
             <span
               class="font-headline text-tertiary-container text-4xl leading-none flex-shrink-0 group-hover:text-tertiary-fixed transition-colors">03</span>
             <div>
-              <h4 class="text-white font-body font-semibold mb-1">Lắp đặt hệ mặt dựng</h4>
-              <p class="text-white/40 text-sm leading-relaxed">Đang thực hiện — Kính Low-E và đá tự nhiên cao cấp cho
-                toàn mặt ngoài.</p>
+              <h4 class="text-white font-body font-semibold mb-1">Ra mắt nhà mẫu</h4>
+              <p class="text-white/40 text-sm leading-relaxed">Tháng 5/2026 chính thức ra mắt căn hộ mẫu để khách hàng
+                tham quan</p>
+            </div>
+          </div>
+          <div
+            class="flex items-start gap-5 p-5 rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm hover:border-tertiary-container/40 hover:bg-white/8 transition-all duration-300 group">
+            <span
+              class="font-headline text-tertiary-container text-4xl leading-none flex-shrink-0 group-hover:text-tertiary-fixed transition-colors">04</span>
+            <div>
+              <h4 class="text-white font-body font-semibold mb-1">Bàn giao căn hộ</h4>
+              <p class="text-white/40 text-sm leading-relaxed">Quý I/2027 chính thức bàn giao căn hộ cho khách hàng vào
+                ở</p>
             </div>
           </div>
         </div>
@@ -2024,15 +2237,16 @@
   <!-- ============================================================ -->
   <!-- SECTION 8: CHÍNH SÁCH & ĐĂNG KÝ                             -->
   <!-- ============================================================ -->
-  <section id="chinh-sach" class="py-24 md:py-32 bg-surface">
+  <section id="chinh-sach" class="py-16 md:py-20 bg-surface">
     <!-- Pricing Cards -->
     <div class="max-w-7xl mx-auto px-6 md:px-12 mb-24 fade-up">
       <div class="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
-          <span class="font-label text-tertiary tracking-widest uppercase text-sm font-bold">Căn hộ đang bán chạy</span>
-          <h2 class="font-headline text-4xl md:text-5xl text-primary mt-2">Phân Khu Căn Hộ</h2>
+          <span class="font-label text-tertiary tracking-widest uppercase text-sm font-bold">Bảng giá ưu đãi</span>
+          <h2 class="font-headline text-4xl md:text-5xl text-primary mt-2">Số lượng có hạn, chiết khẩu lên tới 11% khi
+            thanh toán sớm</h2>
         </div>
-        <div class="flex gap-4">
+        <!-- <div class="flex gap-4">
           <div
             class="flex items-center gap-2 px-4 py-2 bg-surface-container-highest rounded-full text-sm font-semibold">
             <span class="w-3 h-3 bg-tertiary rounded-full"></span> Còn Trống
@@ -2041,50 +2255,53 @@
             class="flex items-center gap-2 px-4 py-2 bg-surface-container-highest rounded-full text-sm font-semibold">
             <span class="w-3 h-3 bg-primary-container/30 rounded-full"></span> Đã Đặt
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
         <div
           class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border-b-2 border-transparent hover:border-tertiary transition-all group cursor-pointer">
           <div class="flex justify-between items-start mb-10">
             <span
-              class="font-headline text-2xl md:text-3xl text-primary group-hover:text-tertiary transition-colors">Signature
-              3-Bedroom</span>
+              class="font-headline text-2xl md:text-3xl text-primary group-hover:text-tertiary transition-colors">Căn 3
+              phòng ngủ Vườn Đào</span>
             <span class="material-symbols-outlined text-tertiary text-4xl">home_work</span>
           </div>
           <div class="space-y-5 mb-10">
             <div class="flex justify-between border-b border-outline-variant/20 pb-4">
-              <span class="text-on-surface-variant font-medium">Diện tích</span><span class="font-bold">185 m²</span>
+              <span class="text-on-surface-variant font-medium">Diện tích</span><span class="font-bold">110 m²</span>
             </div>
             <div class="flex justify-between border-b border-outline-variant/20 pb-4">
-              <span class="text-on-surface-variant font-medium">Tầm nhìn</span><span
-                class="font-bold text-primary">Panoramic Westlake</span>
+              <span class="text-on-surface-variant font-medium">Tầm nhìn</span><span class="font-bold text-primary">Biệt
+                thự Vườn Đào</span>
             </div>
             <div class="flex justify-between border-b border-outline-variant/20 pb-4">
               <span class="text-on-surface-variant font-medium">Trạng thái</span><span
-                class="text-tertiary font-bold">Chỉ còn 02 căn</span>
+                class="text-tertiary font-bold">Chỉ còn 01 căn duy nhất</span>
             </div>
           </div>
           <p class="text-sm text-on-surface-variant mb-1 uppercase tracking-tighter">Giá khởi điểm từ</p>
-          <p class="font-headline text-3xl md:text-4xl text-primary font-bold">22.5 Tỷ VNĐ</p>
+          <p class="font-headline text-3xl md:text-4xl text-primary font-bold">17 Tỷ VNĐ</p>
+          <a href="#dang-ky"
+            class="block w-full mt-8 bg-tertiary text-white py-4 rounded-lg font-bold hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors text-center cursor-pointer">Giữ
+            Chỗ Ưu Tiên</a>
         </div>
 
         <div
           class="bg-primary-container p-8 rounded-xl shadow-2xl relative overflow-hidden text-white lg:scale-105 z-20 cursor-pointer">
-          <div
-            class="absolute top-0 right-0 p-4 bg-tertiary text-white font-label text-xs uppercase font-bold tracking-widest">
-            Limited Edition</div>
+
           <div class="flex justify-between items-start mb-10">
-            <span class="font-headline text-2xl md:text-3xl text-tertiary-fixed-dim">Duplex Emerald</span>
+            <span class="font-headline text-2xl md:text-3xl text-tertiary-fixed-dim">"Biệt thự thông tầng"
+            </span>
             <span class="material-symbols-outlined text-tertiary-fixed-dim text-4xl">diamond</span>
           </div>
           <div class="space-y-5 mb-10">
             <div class="flex justify-between border-b border-white/10 pb-4">
-              <span class="text-white/60 font-medium">Diện tích</span><span class="font-bold">210 m²</span>
+              <span class="text-white/60 font-medium">Diện tích</span><span class="font-bold">199.8 m²</span>
             </div>
             <div class="flex justify-between border-b border-white/10 pb-4">
-              <span class="text-white/60 font-medium">Tầm nhìn</span><span class="font-bold text-tertiary-fixed">Hồ Tây
-                & Phố Cổ</span>
+              <span class="text-white/60 font-medium">Tầm nhìn</span><span class="font-bold text-tertiary-fixed">Hướng
+                Đông Nam -<br> View Hồ Tây cực đẹp
+              </span>
             </div>
             <div class="flex justify-between border-b border-white/10 pb-4">
               <span class="text-white/60 font-medium">Trạng thái</span><span
@@ -2092,7 +2309,7 @@
             </div>
           </div>
           <p class="text-sm text-white/60 mb-1 uppercase tracking-tighter">Giá khởi điểm từ</p>
-          <p class="font-headline text-3xl md:text-4xl text-white font-bold">28.8 Tỷ VNĐ</p>
+          <p class="font-headline text-3xl md:text-4xl text-white font-bold">44.85 Tỷ VNĐ</p>
           <a href="#dang-ky"
             class="block w-full mt-8 bg-tertiary text-white py-4 rounded-lg font-bold hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors text-center cursor-pointer">Giữ
             Chỗ Ưu Tiên</a>
@@ -2102,25 +2319,29 @@
           class="bg-surface-container-lowest p-8 rounded-xl shadow-sm border-b-2 border-transparent hover:border-tertiary transition-all group cursor-pointer">
           <div class="flex justify-between items-start mb-10">
             <span
-              class="font-headline text-2xl md:text-3xl text-primary group-hover:text-tertiary transition-colors">Suite
-              Heritage</span>
+              class="font-headline text-2xl md:text-3xl text-primary group-hover:text-tertiary transition-colors">"Biệt
+              thự trên không"
+            </span>
             <span class="material-symbols-outlined text-tertiary text-4xl">apartment</span>
           </div>
           <div class="space-y-5 mb-10">
             <div class="flex justify-between border-b border-outline-variant/20 pb-4">
-              <span class="text-on-surface-variant font-medium">Diện tích</span><span class="font-bold">145 m²</span>
+              <span class="text-on-surface-variant font-medium">Diện tích</span><span class="font-bold">374 m²</span>
             </div>
             <div class="flex justify-between border-b border-outline-variant/20 pb-4">
-              <span class="text-on-surface-variant font-medium">Tầm nhìn</span><span class="font-bold text-primary">Nội
-                khu Zen Garden</span>
+              <span class="text-on-surface-variant font-medium">Tầm nhìn</span><span
+                class="font-bold text-primary">Hướng Đông Nam -<br> View Hồ Tây cực đẹp</span>
             </div>
             <div class="flex justify-between border-b border-outline-variant/20 pb-4">
               <span class="text-on-surface-variant font-medium">Trạng thái</span><span
-                class="text-tertiary font-bold">Đã bán 85%</span>
+                class="text-tertiary font-bold">Đang mở bán</span>
             </div>
           </div>
           <p class="text-sm text-on-surface-variant mb-1 uppercase tracking-tighter">Giá khởi điểm từ</p>
-          <p class="font-headline text-3xl md:text-4xl text-primary font-bold">16.2 Tỷ VNĐ</p>
+          <p class="font-headline text-3xl md:text-4xl text-primary font-bold">95.48 Tỷ VNĐ</p>
+          <a href="#dang-ky"
+            class="block w-full mt-8 bg-tertiary text-white py-4 rounded-lg font-bold hover:bg-tertiary-container hover:text-on-tertiary-container transition-colors text-center cursor-pointer">Giữ
+            Chỗ Ưu Tiên</a>
         </div>
       </div>
     </div>
@@ -2154,8 +2375,8 @@
           <div class="relative pl-8 border-l-2 border-tertiary/20">
             <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-tertiary"></div>
             <h3 class="font-headline text-2xl text-primary mb-3">Hỗ Trợ Lãi Suất 0%</h3>
-            <p class="text-on-surface-variant leading-relaxed mb-4">Chủ đầu tư hỗ trợ lãi suất 0% trong vòng 24 tháng kể
-              từ ngày giải ngân đầu tiên. Ân hạn nợ gốc trong suốt thời gian hỗ trợ lãi suất.</p>
+            <p class="text-on-surface-variant leading-relaxed mb-4">Chủ đầu tư hỗ trợ lãi suất 0% trong vòng 30 tháng
+              cho đến khi nhận nhà. Ân hạn nợ gốc trong suốt thời gian hỗ trợ lãi suất.</p>
             <span
               class="inline-block px-4 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-bold rounded text-xs uppercase tracking-widest">Ưu
               đãi độc quyền</span>
@@ -2163,7 +2384,7 @@
           <div class="relative pl-8 border-l-2 border-tertiary/20">
             <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary-container"></div>
             <h3 class="font-headline text-2xl text-primary mb-3">Chiết Khấu Thanh Toán Sớm</h3>
-            <p class="text-on-surface-variant leading-relaxed">Nhận ngay chiết khấu lên đến 12% giá trị căn hộ khi thực
+            <p class="text-on-surface-variant leading-relaxed">Nhận ngay chiết khấu lên đến 11% giá trị căn hộ khi thực
               hiện thanh toán sớm 95% giá trị hợp đồng trong vòng 15 ngày kể từ ngày ký HĐMB.</p>
           </div>
           <div class="relative pl-8 border-l-2 border-tertiary/20">
@@ -2194,73 +2415,221 @@
   </section>
 
   <!-- ============================================================ -->
-  <!-- SECTION 8B: FORM ĐĂNG KÝ                                    -->
+  <!-- SECTION FAQ                                                  -->
   <!-- ============================================================ -->
-  <section id="dang-ky" class="py-24 bg-primary-container relative overflow-hidden">
+  <section id="faq" class="relative py-16 md:py-24 bg-surface-container-low overflow-hidden">
+    <!-- Trang trí nền -->
+    <div
+      class="absolute -right-20 top-0 opacity-[0.03] select-none pointer-events-none font-headline font-bold text-[16rem] md:text-[24rem] tracking-tighter text-black leading-none mt-[-2rem]">
+      Q&A
+    </div>
+
+    <div class="max-w-4xl mx-auto px-6 md:px-12 relative z-10 fade-up">
+      <div class="text-center mb-16">
+        <span class="font-label text-tertiary uppercase tracking-[0.4em] text-xs mb-4 block font-bold">Giải đáp thắc
+          mắc</span>
+        <h2 class="font-headline text-4xl md:text-5xl text-primary">Câu Hỏi Thường Gặp</h2>
+        <div class="w-16 h-px bg-tertiary mx-auto mt-6"></div>
+      </div>
+
+      <div class="space-y-6">
+        <!-- Q1 -->
+        <details
+          class="group bg-surface-container-lowest rounded-xl shadow-sm border border-transparent hover:border-tertiary/20 hover:shadow-md open:border-tertiary/30 open:shadow-lg transition-all duration-300">
+          <summary style="list-style: none;"
+            class="flex items-start md:items-center justify-between p-6 md:p-8 cursor-pointer font-headline text-lg sm:text-xl text-primary select-none [&::-webkit-details-marker]:hidden border-l-4 border-transparent group-hover:border-tertiary group-open:border-tertiary transition-colors duration-300 rounded-lg">
+            <div class="flex items-start md:items-center pr-6">
+              <span
+                class="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-tertiary text-white font-label text-xs md:text-sm mr-4 md:mr-6 mt-[2px] md:mt-0 flex-shrink-0">01</span>
+              <span class="leading-snug">Pháp lý dự án hiện nay ra sao?</span>
+            </div>
+            <div
+              class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center flex-shrink-0 group-open:bg-primary group-open:border-primary transition-colors duration-300 mt-0.5 md:mt-0 bg-transparent group-hover:bg-surface-container">
+              <span
+                class="material-symbols-outlined text-outline-variant group-open:text-white transition-transform duration-300 group-open:rotate-180 text-lg mb-[-1px]">expand_more</span>
+            </div>
+          </summary>
+          <div
+            class="pl-6 md:pl-[5.5rem] pr-6 md:pr-12 pb-8 text-on-surface-variant leading-relaxed text-sm md:text-base border-t border-surface-container-highest mx-6 md:mx-4 mt-2 pt-6">
+            Dự án đã có đầy đủ giấy phép xây dựng, sổ hồng sở hữu lâu dài cho từng căn hộ. Đặc biệt Celestine Westlake
+            là một trong những dự án hiếm hoi tại Tây Hồ có 100% căn hộ sở hữu lâu dài, pháp lý minh bạch.
+          </div>
+        </details>
+        <!-- Q2 -->
+        <details
+          class="group bg-surface-container-lowest rounded-xl shadow-sm border border-transparent hover:border-tertiary/20 hover:shadow-md open:border-tertiary/30 open:shadow-lg transition-all duration-300">
+          <summary style="list-style: none;"
+            class="flex items-start md:items-center justify-between p-6 md:p-8 cursor-pointer font-headline text-lg sm:text-xl text-primary select-none [&::-webkit-details-marker]:hidden border-l-4 border-transparent group-hover:border-tertiary group-open:border-tertiary transition-colors duration-300 rounded-lg">
+            <div class="flex items-start md:items-center pr-6">
+              <span
+                class="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-tertiary text-white font-label text-xs md:text-sm mr-4 md:mr-6 mt-[2px] md:mt-0 flex-shrink-0">02</span>
+              <span class="leading-snug">Thời hạn bàn giao nhà dự kiến là khi nào?</span>
+            </div>
+            <div
+              class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center flex-shrink-0 group-open:bg-primary group-open:border-primary transition-colors duration-300 mt-0.5 md:mt-0 bg-transparent group-hover:bg-surface-container">
+              <span
+                class="material-symbols-outlined text-outline-variant group-open:text-white transition-transform duration-300 group-open:rotate-180 text-lg mb-[-1px]">expand_more</span>
+            </div>
+          </summary>
+          <div
+            class="pl-6 md:pl-[5.5rem] pr-6 md:pr-12 pb-8 text-on-surface-variant leading-relaxed text-sm md:text-base border-t border-surface-container-highest mx-6 md:mx-4 mt-2 pt-6">
+            Dự án hiện đã cất nóc và đang hoàn thiện nội thất. Thời gian bàn giao dự kiến vào Quý I/2027 với tiêu chuẩn
+            hoàn thiện cao cấp liền tường.
+          </div>
+        </details>
+        <!-- Q3 -->
+        <details
+          class="group bg-surface-container-lowest rounded-xl shadow-sm border border-transparent hover:border-tertiary/20 hover:shadow-md open:border-tertiary/30 open:shadow-lg transition-all duration-300">
+          <summary style="list-style: none;"
+            class="flex items-start md:items-center justify-between p-6 md:p-8 cursor-pointer font-headline text-lg sm:text-xl text-primary select-none [&::-webkit-details-marker]:hidden border-l-4 border-transparent group-hover:border-tertiary group-open:border-tertiary transition-colors duration-300 rounded-lg">
+            <div class="flex items-start md:items-center pr-6">
+              <span
+                class="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-tertiary text-white font-label text-xs md:text-sm mr-4 md:mr-6 mt-[2px] md:mt-0 flex-shrink-0">03</span>
+              <span class="leading-snug">Chỗ để xe của dự án có đáp ứng đủ không?</span>
+            </div>
+            <div
+              class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center flex-shrink-0 group-open:bg-primary group-open:border-primary transition-colors duration-300 mt-0.5 md:mt-0 bg-transparent group-hover:bg-surface-container">
+              <span
+                class="material-symbols-outlined text-outline-variant group-open:text-white transition-transform duration-300 group-open:rotate-180 text-lg mb-[-1px]">expand_more</span>
+            </div>
+          </summary>
+          <div
+            class="pl-6 md:pl-[5.5rem] pr-6 md:pr-12 pb-8 text-on-surface-variant leading-relaxed text-sm md:text-base border-t border-surface-container-highest mx-6 md:mx-4 mt-2 pt-6">
+            Dự án cung cấp 4 tầng hầm đỗ xe thông minh với công nghệ định vị tự động. Đảm bảo tỷ lệ đủ chỗ đỗ ô tô cho
+            100% các căn hộ hạng sang, giải quyết triệt để bài toán khan hiếm đỗ xe tại khu vực khu vực trung tâm Hồ
+            Tây.
+          </div>
+        </details>
+        <!-- Q4 -->
+        <details
+          class="group bg-surface-container-lowest rounded-xl shadow-sm border border-transparent hover:border-tertiary/20 hover:shadow-md open:border-tertiary/30 open:shadow-lg transition-all duration-300">
+          <summary style="list-style: none;"
+            class="flex items-start md:items-center justify-between p-6 md:p-8 cursor-pointer font-headline text-lg sm:text-xl text-primary select-none [&::-webkit-details-marker]:hidden border-l-4 border-transparent group-hover:border-tertiary group-open:border-tertiary transition-colors duration-300 rounded-lg">
+            <div class="flex items-start md:items-center pr-6">
+              <span
+                class="flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full bg-tertiary text-white font-label text-xs md:text-sm mr-4 md:mr-6 mt-[2px] md:mt-0 flex-shrink-0">04</span>
+              <span class="leading-snug">Chi phí quản lý hàng tháng là bao nhiêu?</span>
+            </div>
+            <div
+              class="w-8 h-8 rounded border border-outline-variant flex items-center justify-center flex-shrink-0 group-open:bg-primary group-open:border-primary transition-colors duration-300 mt-0.5 md:mt-0 bg-transparent group-hover:bg-surface-container">
+              <span
+                class="material-symbols-outlined text-outline-variant group-open:text-white transition-transform duration-300 group-open:rotate-180 text-lg mb-[-1px]">expand_more</span>
+            </div>
+          </summary>
+          <div
+            class="pl-6 md:pl-[5.5rem] pr-6 md:pr-12 pb-8 text-on-surface-variant leading-relaxed text-sm md:text-base border-t border-surface-container-highest mx-6 md:mx-4 mt-2 pt-6">
+            Chủ đầu tư cam kết cung cấp đơn vị quản lý vận hành chuẩn quốc tế 5 sao nhưng với mức phí đóng góp cực kỳ
+            hợp lý, chỉ ngang ngửa các khu chung cư cao cấp lân cận để hỗ trợ cư dân xây dựng cộng đồng tinh hoa văn
+            minh bền vững.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 8B: FORM ĐĂNG KÝ (2 BƯỚC)                           -->
+  <!-- ============================================================ -->
+  <section id="dang-ky" class="py-16 md:py-20 bg-primary-container relative overflow-hidden">
     <div class="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none"
       style="background-image: radial-gradient(circle, #cca730 1px, transparent 1px); background-size: 24px 24px;">
     </div>
     <div class="max-w-5xl mx-auto px-6 relative z-10 text-center mb-16">
-      <h2 class="font-headline text-4xl md:text-6xl text-white mb-6">Đăng Ký Tư Vấn Cá Nhân</h2>
-      <p class="text-white/70 max-w-2xl mx-auto text-lg">Đội ngũ cố vấn tận tâm của chúng tôi sẽ liên hệ trong vòng 24
-        giờ để cung cấp thông tin chi tiết nhất về dự án.</p>
+      <h2 class="font-headline text-4xl md:text-6xl text-white mb-6">NHẬN BÁO GIÁ & TƯ VẤN TRỰC TIẾP TỪ CHUYÊN GIA</h2>
+      <p class="text-white/70 max-w-2xl mx-auto text-lg">Đội ngũ cố vấn tận tâm của chúng tôi sẽ liên hệ trong vòng 15
+        phút để cung cấp thông tin chi tiết nhất về dự án.</p>
     </div>
     <div class="max-w-4xl mx-auto px-6 relative z-10">
       <form id="contact-form" onsubmit="handleSubmit(event)"
         class="bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-2xl">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8">
-          <div class="space-y-1">
-            <label class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold"
-              for="full-name">Họ và tên *</label>
-            <input id="full-name" name="name" required
-              class="w-full bg-surface-container-high border-0 border-b-2 border-primary focus:border-tertiary transition-colors py-4 px-4 placeholder:text-outline-variant font-medium rounded-t-md"
-              placeholder="Nguyễn Văn A" type="text">
+
+        <!-- ═══ BƯỚC 1: Chọn sản phẩm quan tâm ═══ -->
+        <div class="form-step active" id="form-step-1">
+          <div class="text-center mb-8">
+            <h3 class="font-headline text-2xl md:text-3xl text-primary mb-3">Chọn sản phẩm bạn quan tâm</h3>
+            <p class="text-on-surface-variant text-sm">Vui lòng chọn loại căn hộ để chúng tôi tư vấn phù hợp nhất</p>
           </div>
-          <div class="space-y-1">
-            <label class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold" for="phone">Số
-              điện thoại *</label>
-            <input id="phone" name="phone" required
-              class="w-full bg-surface-container-high border-0 border-b-2 border-primary focus:border-tertiary transition-colors py-4 px-4 placeholder:text-outline-variant font-medium rounded-t-md"
-              placeholder="+84 900 000 000" type="tel">
-          </div>
-          <div class="space-y-1">
-            <label class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold"
-              for="email">Email</label>
-            <input id="email" name="email"
-              class="w-full bg-surface-container-high border-0 border-b-2 border-primary focus:border-tertiary transition-colors py-4 px-4 placeholder:text-outline-variant font-medium rounded-t-md"
-              placeholder="example@gmail.com" type="email">
-          </div>
-          <div class="space-y-1">
-            <label class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold"
-              for="product">Sản phẩm quan tâm</label>
-            <select id="product" name="product"
-              class="w-full bg-surface-container-high border-0 border-b-2 border-primary focus:border-tertiary transition-colors py-4 px-4 font-medium rounded-t-md">
-              <option>Căn 3 Phòng Ngủ (110-140 m²)</option>
-              <option>Căn Duplex (160-200 m²)</option>
-              <option>Căn Penthouse (300+ m²)</option>
-              <option>Signature 3-Bedroom (185 m²)</option>
-            </select>
-          </div>
-        </div>
-        <div class="mb-10">
-          <label class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold"
-            for="message">Lời nhắn (Tùy chọn)</label>
-          <textarea id="message" name="message"
-            class="w-full bg-surface-container-high border-0 border-b-2 border-primary focus:border-tertiary transition-colors py-4 px-4 placeholder:text-outline-variant font-medium resize-none rounded-t-md"
-            placeholder="Yêu cầu cụ thể của bạn..." rows="3"></textarea>
-        </div>
-        <div class="flex flex-col items-center">
-          <button id="submit-btn" type="submit"
-            class="group relative px-10 md:px-12 py-4 md:py-5 bg-primary-container text-white rounded-lg overflow-hidden font-bold tracking-widest uppercase text-sm transition-all hover:shadow-2xl active:scale-95">
-            <span class="relative z-10">Gửi Yêu Cầu Tư Vấn</span>
-            <div
-              class="absolute inset-0 bg-tertiary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300">
+          <div class="max-w-md mx-auto space-y-6">
+            <div class="space-y-1">
+              <label class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold"
+                for="product">Sản phẩm quan tâm *</label>
+              <select id="product" name="product" required
+                class="w-full bg-surface-container-high border-0 border-b-2 border-primary focus:border-tertiary transition-colors py-4 px-4 font-medium rounded-t-md text-base">
+                <option value="" disabled selected>— Chọn loại căn hộ —</option>
+                <option value="Căn 3 Phòng Ngủ">Căn 3 Phòng Ngủ (110.6 - 138 m²)</option>
+                <option value="Căn Duplex">Căn Duplex (166.5 - 194.2 m²)</option>
+                <option value="Căn Penthouse">Căn Penthouse (229.4 - 373.7 m²)</option>
+              </select>
             </div>
-          </button>
-          <p id="form-msg" class="mt-4 text-sm hidden"></p>
-          <p class="mt-6 text-xs text-on-surface-variant italic">Chúng tôi cam kết bảo mật tuyệt đối thông tin của quý
+            <div class="flex justify-center pt-4">
+              <button type="button" onclick="goToStep(2)"
+                class="group relative px-10 md:px-12 py-4 md:py-5 bg-primary-container text-white rounded-lg overflow-hidden font-bold tracking-widest uppercase text-sm transition-all hover:shadow-2xl active:scale-95 w-full md:w-auto">
+                <span class="relative z-10 flex items-center justify-center gap-3">Tiếp Tục <span
+                    class="material-symbols-outlined text-xl">arrow_forward</span></span>
+                <div
+                  class="absolute inset-0 bg-tertiary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300">
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═══ BƯỚC 2: Thông tin liên hệ ═══ -->
+        <div class="form-step" id="form-step-2">
+          <div class="text-center mb-8">
+            <h3 class="font-headline text-2xl md:text-3xl text-primary mb-3">Thông tin liên hệ</h3>
+            <p class="text-on-surface-variant text-sm">Vui lòng điền thông tin để chúng tôi liên hệ tư vấn chi tiết</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8">
+            <div class="space-y-1">
+              <label class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold"
+                for="full-name">Họ và tên *</label>
+              <input id="full-name" name="name" required
+                class="w-full bg-surface-container-high border-0 border-b-2 border-primary focus:border-tertiary transition-colors py-4 px-4 placeholder:text-outline-variant font-medium rounded-t-md"
+                placeholder="Nguyễn Văn A" type="text">
+            </div>
+            <div class="space-y-1">
+              <label class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold"
+                for="email">Gmail</label>
+              <input id="email" name="email"
+                class="w-full bg-surface-container-high border-0 border-b-2 border-primary focus:border-tertiary transition-colors py-4 px-4 placeholder:text-outline-variant font-medium rounded-t-md"
+                placeholder="example@gmail.com" type="email">
+            </div>
+            <div class="space-y-1 md:col-span-2">
+              <label class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold"
+                for="phone">Số điện thoại *</label>
+              <input id="phone" name="phone" required
+                class="w-full bg-surface-container-high border-0 border-b-2 border-primary focus:border-tertiary transition-colors py-4 px-4 placeholder:text-outline-variant font-medium rounded-t-md"
+                placeholder="0900 000 000" type="tel">
+            </div>
+          </div>
+          <div class="mb-10">
+            <label class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-bold"
+              for="message">Lời nhắn (Tùy chọn)</label>
+            <textarea id="message" name="message"
+              class="w-full bg-surface-container-high border-0 border-b-2 border-primary focus:border-tertiary transition-colors py-4 px-4 placeholder:text-outline-variant font-medium resize-none rounded-t-md"
+              placeholder="Yêu cầu cụ thể của bạn..." rows="3"></textarea>
+          </div>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button type="button" onclick="goToStep(1)"
+              class="flex items-center gap-2 px-6 py-4 text-on-surface-variant hover:text-primary font-semibold text-sm uppercase tracking-widest transition-colors">
+              <span class="material-symbols-outlined text-xl">arrow_back</span>
+              <span>Quay Lại</span>
+            </button>
+            <button id="submit-btn" type="submit"
+              class="group relative px-10 md:px-12 py-4 md:py-5 bg-primary-container text-white rounded-lg overflow-hidden font-bold tracking-widest uppercase text-sm transition-all hover:shadow-2xl active:scale-95">
+              <span class="relative z-10">Gửi Yêu Cầu Tư Vấn</span>
+              <div
+                class="absolute inset-0 bg-tertiary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300">
+              </div>
+            </button>
+          </div>
+          <p id="form-msg" class="mt-4 text-sm text-center hidden"></p>
+          <p class="mt-6 text-xs text-on-surface-variant italic text-center">Chúng tôi cam kết bảo mật tuyệt đối thông
+            tin của quý
             khách.</p>
         </div>
+
       </form>
     </div>
   </section>
@@ -2295,16 +2664,16 @@
         <div>
           <h5 class="font-label text-xs uppercase tracking-widest text-white/40 mb-6">Liên hệ</h5>
           <div class="flex flex-col gap-3 text-sm text-white/60">
-            <span>Hotline: 1900 xxx xxx</span>
-            <span>Email: info@celestinewestlake.vn</span>
+            <span>Hotline: 091 444 6368</span>
+            <span>Email: info@celestine-westlake.vn</span>
             <span>300 Võ Chí Công, Tây Hồ, HN</span>
           </div>
-          <div class="flex gap-4 mt-6">
+          <!-- <div class="flex gap-4 mt-6">
             <a href="#"
               class="text-white/40 hover:text-tertiary-container transition-colors text-sm uppercase tracking-widest">Facebook</a>
             <a href="#"
               class="text-white/40 hover:text-tertiary-container transition-colors text-sm uppercase tracking-widest">Instagram</a>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
@@ -2326,7 +2695,26 @@
   <!-- ============================================================ -->
   <!-- SCRIPTS                                                       -->
   <!-- ============================================================ -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
+    // Initialize Swiper for infinity sliders
+    document.addEventListener("DOMContentLoaded", function () {
+      const swiperConfig = {
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        grabCursor: true,
+      };
+      if (document.querySelector('.swiper-3br')) new Swiper('.swiper-3br', swiperConfig);
+      if (document.querySelector('.swiper-duplex')) new Swiper('.swiper-duplex', swiperConfig);
+      if (document.querySelector('.swiper-penthouse')) new Swiper('.swiper-penthouse', swiperConfig);
+    });
     // Mobile menu toggle
     function toggleMenu() {
       const menu = document.getElementById('mobile-menu');
@@ -2377,18 +2765,91 @@
       }
     });
 
-    // Form submit handler
+    // ── Multi-step Form Logic ─────────────────────────────────────
+    var currentStep = 1;
+
+    function goToStep(step) {
+      // Validate step 1 before proceeding
+      if (step === 2) {
+        var productSelect = document.getElementById('product');
+        if (!productSelect.value) {
+          productSelect.focus();
+          productSelect.style.borderColor = '#ba1a1a';
+          setTimeout(function () { productSelect.style.borderColor = ''; }, 2000);
+          return;
+        }
+      }
+
+      var oldStep = document.getElementById('form-step-' + currentStep);
+      var newStep = document.getElementById('form-step-' + step);
+
+      // Animate out
+      oldStep.classList.remove('active');
+
+      // After short delay, show new step
+      setTimeout(function () {
+        newStep.classList.add('active');
+      }, 50);
+
+      currentStep = step;
+
+      // Scroll form into view
+      document.getElementById('dang-ky').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Form submit handler — sends data to Google Apps Script
     function handleSubmit(e) {
       e.preventDefault();
-      const btn = document.getElementById('submit-btn');
-      const msg = document.getElementById('form-msg');
+      var btn = document.getElementById('submit-btn');
+      var msg = document.getElementById('form-msg');
+
+      // Collect form data
+      var formData = {
+        name: document.getElementById('full-name').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        phone: "'" + document.getElementById('phone').value.trim(),
+        product: document.getElementById('product').value,
+        message: document.getElementById('message').value.trim()
+      };
+
       btn.disabled = true;
       btn.innerHTML = '<span class="relative z-10">Đang gửi...</span>';
-      setTimeout(() => {
+
+      // ── GỬI DATA LÊN GOOGLE SHEETS ──
+      var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyWTmUgD5vWew0lMjYE0SAOgjhFfV4sR4teQI7O9G_G6F1s4dQAWEf8dyYhTbtohKw/exec';
+
+      function onSuccess() {
         msg.textContent = '✓ Yêu cầu của quý khách đã được ghi nhận. Chúng tôi sẽ liên hệ trong vòng 24 giờ.';
-        msg.className = 'mt-4 text-sm text-tertiary font-semibold';
+        msg.className = 'mt-4 text-sm text-tertiary font-semibold text-center';
         btn.innerHTML = '<span class="relative z-10">Đã gửi thành công</span>';
-      }, 1500);
+        btn.classList.add('bg-tertiary');
+        btn.classList.remove('bg-primary-container');
+
+        // Auto-reset form sau 4 giây để đăng ký tiếp
+        setTimeout(function () {
+          // Reset tất cả input
+          document.getElementById('contact-form').reset();
+          // Reset message
+          msg.textContent = '';
+          msg.className = 'mt-4 text-sm text-center hidden';
+          // Reset button
+          btn.disabled = false;
+          btn.innerHTML = '<span class="relative z-10">Gửi Yêu Cầu Tư Vấn</span>';
+          btn.classList.remove('bg-tertiary');
+          btn.classList.add('bg-primary-container');
+          // Quay về bước 1
+          goToStep(1);
+        }, 4000);
+      }
+
+      fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
+        .then(onSuccess)
+        .catch(onSuccess); // no-cors luôn trả opaque response, nên catch cũng xử lý OK
     }
 
     // ── Chart Bar Animation ──────────────────────────────────────
