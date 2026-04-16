@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="light" lang="vi">
 
 <head>
@@ -871,6 +871,61 @@
       transform: scale(1.05);
     }
 
+    /* Floating Quote Button */
+    .floating-quote {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background-color: #014460;
+      /* Màu Navy đồng bộ dự án */
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      text-decoration: none;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 2px solid #cca730;
+    }
+
+    .floating-quote:hover {
+      transform: scale(1.1) translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .quote-icon {
+      font-size: 1.8rem;
+      z-index: 2;
+    }
+
+    .quote-pulse {
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      background-color: rgba(204, 167, 48, 0.4);
+      border-radius: 50%;
+      z-index: 1;
+      animation: pulse-quote 2s infinite;
+    }
+
+    @keyframes pulse-quote {
+      0% {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    }
+
     .call-icon {
       font-size: 1.8rem;
       z-index: 2;
@@ -1039,7 +1094,7 @@
       <div class="md:col-span-8 flex flex-col justify-center">
         <h1
           class="font-headline text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-white leading-[1.2] md:leading-[1.1] mb-0 md:mb-0 max-w-4xl text-shadow-strong">
-          Căn hộ 3 - 4 ngủ
+          Căn hộ hạng sang cuối cùng
           <span
             class="block italic font-light opacity-90 text-[2rem] sm:text-[2.25rem] md:text-inherit mt-1 md:mt-0">View
             trực diện Hồ Tây</span>
@@ -2830,6 +2885,21 @@
         </div>
       </div>
     </div>
+
+    <!-- Nút Nhận Báo Giá Trôi Nổi -->
+    <a href="#dang-ky" class="floating-quote" title="Nhận Báo Giá & Ưu Đãi">
+      <div class="quote-pulse"></div>
+      <div class="quote-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+      </div>
+    </a>
 
     <!-- Nút Gọi Trôi Nổi -->
     <a href="tel:091 444 6368" class="floating-call" title="Gọi Ngay: 091 444 6368">
