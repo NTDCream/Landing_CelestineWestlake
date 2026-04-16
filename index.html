@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="light" lang="vi">
 
 <head>
@@ -845,8 +845,112 @@
     .swiper-pagination-bullet-active {
       background-color: #cca730 !important;
     }
+
+    /* Floating Call Button */
+    .floating-call {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      width: 60px;
+      height: 60px;
+      background-color: #d4af37;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      text-decoration: none;
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .floating-call:hover {
+      transform: scale(1.05);
+    }
+
+    .call-icon {
+      font-size: 1.8rem;
+      z-index: 2;
+      animation: ring 1.5s infinite;
+    }
+
+    .call-pulse {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #d4af37;
+      border-radius: 50%;
+      z-index: 1;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes ring {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      10% {
+        transform: rotate(20deg);
+      }
+
+      20% {
+        transform: rotate(-20deg);
+      }
+
+      30% {
+        transform: rotate(20deg);
+      }
+
+      40% {
+        transform: rotate(-20deg);
+      }
+
+      50% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: scale(1.8);
+        opacity: 0;
+      }
+    }
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2456927751396396');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2456927751396396&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
+  <!-- Meta CAPI Tracking -->
+  <script src="meta-capi.js"></script>
 </head>
 
 <body class="bg-surface font-body text-on-surface selection:bg-tertiary-container selection:text-white">
@@ -2610,7 +2714,8 @@
         <div class="form-step" id="form-step-2">
           <div class="text-center mb-8">
             <h3 class="text-2xl md:text-3xl text-primary mb-3">Thông tin liên hệ</h3>
-            <p class="text-on-surface-variant text-sm">Vui lòng điền thông tin để chúng tôi liên hệ tư vấn chi tiết</p>
+            <p class="text-on-surface-variant text-sm">Vui lòng điền thông tin để chúng tôi gửi báo giá chính xác và
+              nhanh nhất</p>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-8">
             <div class="space-y-1">
@@ -2650,7 +2755,7 @@
             </button>
             <button id="submit-btn" type="submit"
               class="group relative px-10 md:px-12 py-4 md:py-5 bg-primary-container text-white rounded-lg overflow-hidden font-bold tracking-widest uppercase text-sm transition-all hover:shadow-2xl active:scale-95">
-              <span class="relative z-10">Gửi Yêu Cầu Tư Vấn</span>
+              <span class="relative z-10">Gửi thông tin</span>
               <div
                 class="absolute inset-0 bg-tertiary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300">
               </div>
@@ -2722,6 +2827,19 @@
         </div>
       </div>
     </div>
+
+    <!-- Nút Gọi Trôi Nổi -->
+    <a href="tel:091 444 6368" class="floating-call" title="Gọi Ngay: 091 444 6368">
+      <div class="call-pulse"></div>
+      <div class="call-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle;">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+          </path>
+        </svg>
+      </div>
+    </a>
   </footer>
 
   <!-- ============================================================ -->
@@ -2836,42 +2954,48 @@
       var msg = document.getElementById('form-msg');
 
       // Collect form data
+      var phoneVal = document.getElementById('phone').value.trim();
       var formData = {
         name: document.getElementById('full-name').value.trim(),
         email: document.getElementById('email').value.trim(),
-        phone: "'" + document.getElementById('phone').value.trim(),
+        phone: "'" + phoneVal,
         product: document.getElementById('product').value,
         message: document.getElementById('message').value.trim()
       };
 
       btn.disabled = true;
-      btn.innerHTML = '<span class="relative z-10">Đang gửi...</span>';
+      btn.innerHTML = '<span class="relative z-10 flex items-center justify-center gap-2">' +
+        '<svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">' +
+        '<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>' +
+        '<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>' +
+        '</svg>Đang gửi...</span>';
+      btn.classList.add('bg-tertiary', 'animate-pulse');
+      btn.classList.remove('bg-primary-container');
 
       // ── GỬI DATA LÊN GOOGLE SHEETS ──
       var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyWTmUgD5vWew0lMjYE0SAOgjhFfV4sR4teQI7O9G_G6F1s4dQAWEf8dyYhTbtohKw/exec';
 
       function onSuccess() {
-        msg.textContent = '✓ Yêu cầu của quý khách đã được ghi nhận. Chúng tôi sẽ liên hệ trong vòng 24 giờ.';
-        msg.className = 'mt-4 text-sm text-tertiary font-semibold text-center';
-        btn.innerHTML = '<span class="relative z-10">Đã gửi thành công</span>';
-        btn.classList.add('bg-tertiary');
-        btn.classList.remove('bg-primary-container');
+        // [Tracking] Gọi event Lead sau khi submit form thành công
+        var emailInputRaw = document.getElementById('email') ? document.getElementById('email').value.trim() : '';
+        var phoneInputRaw = document.getElementById('phone') ? document.getElementById('phone').value.trim() : '';
+        if (window.processLeadTracking) {
+          window.processLeadTracking(emailInputRaw, phoneInputRaw);
+        }
 
-        // Auto-reset form sau 4 giây để đăng ký tiếp
+        btn.innerHTML = '<span class="relative z-10">Đã gửi thành công</span>';
+        btn.classList.remove('animate-pulse');
+
+        // Reset tất cả input
+        document.getElementById('contact-form').reset();
+
+        var nameParam = encodeURIComponent(formData.name);
+        var phoneParam = encodeURIComponent(phoneVal);
+
+        // Chuyển hướng sang trang cảm ơn
         setTimeout(function () {
-          // Reset tất cả input
-          document.getElementById('contact-form').reset();
-          // Reset message
-          msg.textContent = '';
-          msg.className = 'mt-4 text-sm text-center hidden';
-          // Reset button
-          btn.disabled = false;
-          btn.innerHTML = '<span class="relative z-10">Gửi Yêu Cầu Tư Vấn</span>';
-          btn.classList.remove('bg-tertiary');
-          btn.classList.add('bg-primary-container');
-          // Quay về bước 1
-          goToStep(1);
-        }, 4000);
+          window.location.href = 'thankyou.html?name=' + nameParam + '&phone=' + phoneParam;
+        }, 500);
       }
 
       fetch(APPS_SCRIPT_URL, {
